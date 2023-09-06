@@ -1,6 +1,11 @@
+export default function Error(){
 
-export default function Erro404() {
-    return (
-      <div>Erro404</div>
-    )
-  }
+  return(
+      <>
+          <h1>Erro 404 - Página Não <Encontrada></Encontrada></h1>
+      </>
+          
+      
+  )
+
+}
