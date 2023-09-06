@@ -1,6 +1,6 @@
 import { ListaProdutos } from "../../components/ListaProdutos";
 import { Link } from "react-router-dom"
-import {AiFillEdit as Editar} from "react-icons/ai"
+
 
 export default function Produtos(){
 
@@ -24,7 +24,7 @@ export default function Produtos(){
                             {/* <td>{item.desc}</td> */}
                             {/* <td><img src={`${item.img}`} alt={`$item.desc`}/></td> */}
                             <td>{item.preco}</td>
-                            <td> <Link to={`/editar/produtos/${item.id}`}> <Editar/> </Link> / 
+                            <td> <Link to={`/editar/produtos/${item.id}`}> Editar o produto: {item.nome}  </Link> / 
                             <Link to={`/excluir/produtos/${item.id}`}> Excluir </Link>
                             </td>
                         </tr>
