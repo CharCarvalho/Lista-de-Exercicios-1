@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
 import './index.css'
 import EditarProduto from './routes/EditarProduto/EditarProduto.jsx'
@@ -10,7 +10,7 @@ import Produtos from './routes/Produtos/Produtos.jsx'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App/>,
     errorElement: <Error/>,
     children:[
@@ -23,8 +23,12 @@ const router = createBrowserRouter([
         path:"/produtos",
         element: <Produtos/>
       },
-      {path:'/editar/:id',
+      {path:"/produtos/editar/:id",
       element:<EditarProduto />
+      },
+      {
+        path:"/antiga",
+        element: <Navigate to="/" />
       }
     ]
   }])
